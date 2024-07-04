@@ -11,6 +11,7 @@
 #include <hazard.h>
 #include <vocal.h>
 #include <infrared.h>
+#include <SCoop.h>
 
 float temperature = 0;
 float humidity = 0;
@@ -23,8 +24,22 @@ bool fireState = false;
 bool smokeState = false;
 String rfidContent = "";
 
+//defineTask(video)
+//
+//void video::setup() {
+//    Serial.begin(500000);
+//    Serial3.begin(500000);
+//}
+//
+//
+//void video::loop(){
+//    while(Serial3.available()) {
+//        Serial.write(Serial3.read());
+//    }
+//}
+
 void setup() {
-    Serial.begin(9600);
+    btInit();
     oledInit();
     dhtInit();
     doorInit();
@@ -32,16 +47,16 @@ void setup() {
     touchInit();
     rainInit();
     remoteInit();
-    btInit();
     hazardInit();
     vocalInit();
     infraredInit();
-
+    mySCoop.start();
 // write your initialization code here
 }
 
 void loop() {
     hazardDetect();
+    yield();
     readDHT();
     rfidCheck();
     existsPerson();
@@ -52,6 +67,5 @@ void loop() {
     getMessage();
     vocalDetect();
     updateInfo();
-    delay(10);
 // write your code here
 }

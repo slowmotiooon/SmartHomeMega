@@ -10,6 +10,6 @@
 
 void doorInit();
 void doorOpen();
-void doorClose();
+void doorClose(bool isWelcome = true);
 
 #endif //SMARTHOME_DOOR_H

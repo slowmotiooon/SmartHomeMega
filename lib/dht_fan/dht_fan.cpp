@@ -25,10 +25,10 @@ void readDHT() {
 
 // 到没到28度
 void dhtJudge() {
-    if(temperature>30 && !fanState){
+    if(temperature>27 && !fanState){
         if(!forcedFan) fanOpen();
     }
-    if(temperature<=30 && fanState){
+    if(temperature<=27 && fanState){
         if(!forcedFan) fanClose();
     }
 }

@@ -27,7 +27,7 @@ void rfidCheck(){
     if (piccType != MFRC522::PICC_TYPE_MIFARE_MINI &&
         piccType != MFRC522::PICC_TYPE_MIFARE_1K &&
         piccType != MFRC522::PICC_TYPE_MIFARE_4K) {
-        Serial.println(F("Your tag is not of type MIFARE Classic."));
+        //Serial.println(F("Your tag is not of type MIFARE Classic."));
         return;
     }
 

@@ -19,9 +19,10 @@ void doorOpen(){
 
 }
 
-void doorClose(){
+void doorClose(bool isWelcome){
     doorState = false;
-    welcome();
+    if(isWelcome) welcome();
+    else updateInfo();
     doorServo.write(CLOSE_ANGLE);
     delay(1000);
 

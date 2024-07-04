@@ -4,6 +4,8 @@
 #include <light.h>
 #include <window.h>
 
+
+
 void vocalInit(){
     Serial2.begin(19200);
     Serial.print("vocal ok");
@@ -20,7 +22,7 @@ void vocalDetect(){
 
     if(command == "0"){                             //智能开灯语音
         Serial.println("Detected voice command: Turn on the light");
-        setLightness(255, true);
+        setLightness(127, true);
     }
     if(command == "1"){                             //智能关灯语音
         Serial.println("Detected voice command: Turn off the light");

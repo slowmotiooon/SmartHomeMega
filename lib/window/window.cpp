@@ -7,7 +7,7 @@ bool forcedWindow = false;
 
 void windowInit(){
     windowServo.attach(WINDOW_PIN);
-    windowServo.write(CLOSE_ANGLE);
+    windowServo.write(OPEN_ANGLE);
 }
 
 void windowOpen(bool force){
