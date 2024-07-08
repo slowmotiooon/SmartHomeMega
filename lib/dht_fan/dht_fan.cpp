@@ -4,6 +4,7 @@ extern float humidity;
 extern float temperature;
 extern bool fanState;
 DHT dht(DHTPIN,DHTTYPE);
+int edgeTemperature = 28;
 bool forcedFan = false;
 
 // 初始化 DHT 传感器和风扇控制引脚
@@ -25,10 +26,10 @@ void readDHT() {
 
 // 到没到28度
 void dhtJudge() {
-    if(temperature>27 && !fanState){
+    if(temperature>edgeTemperature && !fanState){
         if(!forcedFan) fanOpen();
     }
-    if(temperature<=27 && fanState){
+    if(temperature<=edgeTemperature && fanState){
         if(!forcedFan) fanClose();
     }
 }
@@ -51,5 +52,9 @@ void fanClose(bool force) {
 
 void quitFanForce(){
     forcedFan = false;
+}
+
+void setTemperature(int val){
+    edgeTemperature = val;
 }
 

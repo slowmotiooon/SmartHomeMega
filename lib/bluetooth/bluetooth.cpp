@@ -29,4 +29,11 @@ void getMessage(){
     if(command.equals("closewindow\r\n")) windowClose(true);
     if(command.equals("autowindow\r\n")) quitWindowForce();
     if(command.equals("alarm\r\n")) alarm();
+    if(command.startsWith("temperature ")){
+        if(command.length()>14){
+            Serial1.println(command.substring(12).toInt());
+            setTemperature(command.substring(12).toInt());
+        }
+    }
+
 }

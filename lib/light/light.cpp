@@ -28,7 +28,7 @@ void setLightState(){
 
 void setLightness(int val,bool force){
     if(forcedLight && !force) return;
-    //Serial1.println("setlightness");
+    Serial1.println("setlightness");
     settledLightness = (val+1)/16;
     analogWrite(LED_B,val);
     analogWrite(LED_G,val);

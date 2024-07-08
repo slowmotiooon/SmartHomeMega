@@ -20,5 +20,5 @@ void dhtJudge(); // 判断温度是否达到标准
 void fanOpen(bool force = false); // 开启风扇
 void fanClose(bool force = false); // 关闭风扇
 void quitFanForce();
-
+void setTemperature(int val);
 #endif //DESIGNANDBUILDING_DHT_FAN_H
