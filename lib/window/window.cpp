@@ -1,5 +1,6 @@
 #include <window.h>
 #include <oled.h>
+#include <pins.h>
 
 Servo windowServo;
 extern bool windowState;

@@ -1,5 +1,6 @@
 #include <touch.h>
 #include <beep.h>
+#include <pins.h>
 
 void touchInit(){
     pinMode(TOUCH_PIN,INPUT);

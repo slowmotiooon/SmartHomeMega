@@ -1,6 +1,7 @@
 #include <infrared.h>
 #include <Arduino.h>
 #include <light.h>
+#include <pins.h>
 
 extern int settledLightness;
 

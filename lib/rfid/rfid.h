@@ -6,11 +6,7 @@
 #define SMARTHOME_RFID_H
 
 
-#include <SPI.h>
-#include <MFRC522.h>
 
-#define SS_PIN 53
-#define RST_PIN 49
 
 void rfidInit();
 void rfidCheck();

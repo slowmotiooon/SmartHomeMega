@@ -5,11 +5,7 @@
 #include <Arduino.h>
 #include <DHT.h>
 
-// 定义引脚和传感器类型
-#define DHTPIN 48
-#define DHTTYPE DHT11 // 定义传感器类型为 DHT11
-#define FAN_IA 46
-#define FAN_IB 44
+#define DHT_TYPE DHT11 // 定义传感器类型为 DHT11
 
 // 创建 DHT 传感器对象
 

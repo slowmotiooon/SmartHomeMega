@@ -6,7 +6,7 @@
 #define SMARTHOME_BEEP_H
 
 #include <Arduino.h>
-#define BEEP_PIN 45
+
 
 void beepInit();
 void doorbell();

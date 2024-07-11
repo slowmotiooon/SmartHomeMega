@@ -1,6 +1,7 @@
 #include "hazard.h"
 #include <Arduino.h>
 #include <beep.h>
+#include <pins.h>
 
 extern bool smokeState;
 extern bool fireState;

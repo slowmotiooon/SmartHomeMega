@@ -1,6 +1,7 @@
 #include <light.h>
 #include <lightSensor.h>
 #include <Arduino.h>
+#include <pins.h>
 
 extern int lightness;
 extern int settledLightness;

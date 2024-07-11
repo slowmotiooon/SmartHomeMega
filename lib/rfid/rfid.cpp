@@ -1,7 +1,10 @@
 #include <rfid.h>
 #include "door.h"
+#include <SPI.h>
+#include <MFRC522.h>
+#include <pins.h>
 
-MFRC522 mfrc522(SS_PIN,RST_PIN);
+MFRC522 mfrc522(RFID_SS_PIN, RFID_RST_PIN);
 extern String rfidContent;
 
 void rfidInit(){

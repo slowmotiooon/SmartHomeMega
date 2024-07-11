@@ -12,6 +12,7 @@
 #include <vocal.h>
 #include <infrared.h>
 #include <SCoop.h>
+#include <clock.h>
 
 float temperature = 0;
 float humidity = 0;
@@ -22,23 +23,22 @@ int lightness = 1023;
 int settledLightness = 0;
 bool fireState = false;
 bool smokeState = false;
+bool enableAutoRefresh = true;
 String rfidContent = "";
 
-//defineTask(video)
-//
-//void video::setup() {
-//    Serial.begin(500000);
-//    Serial3.begin(500000);
-//}
-//
-//
-//void video::loop(){
-//    while(Serial3.available()) {
-//        Serial.write(Serial3.read());
-//    }
-//}
+defineTask(clockTask)
+
+void clockTask::setup() {
+}
+
+
+void clockTask::loop(){
+    //updateInfo();
+    delay(500);
+}
 
 void setup() {
+    Serial.begin(9600);
     btInit();
     oledInit();
     dhtInit();
@@ -50,13 +50,14 @@ void setup() {
     hazardInit();
     vocalInit();
     infraredInit();
+    clockInit();
     mySCoop.start();
 // write your initialization code here
 }
 
 void loop() {
     hazardDetect();
-    yield();
+    //yield();
     readDHT();
     rfidCheck();
     existsPerson();
@@ -67,5 +68,6 @@ void loop() {
     getMessage();
     vocalDetect();
     updateInfo();
+    //getDateTime();
 // write your code here
 }

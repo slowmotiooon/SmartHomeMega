@@ -1,8 +1,5 @@
-//
-// Created by dynan on 2024/7/3.
-//
-
 #include <beep.h>
+#include <pins.h>
 
 void beepInit(){
     pinMode(BEEP_PIN,OUTPUT);

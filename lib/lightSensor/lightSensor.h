@@ -2,7 +2,7 @@
 #ifndef SMARTHOMEMEGA_LIGHTSENSOR_H
 #define SMARTHOMEMEGA_LIGHTSENSOR_H
 
-#define LIGHT_SENSOR_PIN A0
+
 
 void detectLightness();
 

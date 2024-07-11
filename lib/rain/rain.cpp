@@ -1,6 +1,7 @@
 #include <rain.h>
 #include <Arduino.h>
 #include <window.h>
+#include <pins.h>
 
 extern bool windowState;
 

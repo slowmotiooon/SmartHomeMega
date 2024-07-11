@@ -1,5 +1,8 @@
 #include <door.h>
 #include "oled.h"
+#include <Servo.h>
+#include <Arduino.h>
+#include <pins.h>
 
 Servo doorServo;
 extern bool doorState;

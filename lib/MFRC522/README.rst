@@ -170,8 +170,8 @@ The following table shows the typical pin layout used:
 | SPI SCK   | D5            | 1      | 21     | 13     |
 +-----------+---------------+--------+--------+--------+
 
-.. [1] Configurable, typically defined as RST_PIN in sketch/program.
-.. [2] Configurable, typically defined as SS_PIN in sketch/program.
+.. [1] Configurable, typically defined as RFID_RST_PIN in sketch/program.
+.. [2] Configurable, typically defined as RFID_SS_PIN in sketch/program.
 .. [3] The SDA pin might be labeled SS on some/older MFRC522 boards. 
 .. [4] Source: https://github.com/miguelbalboa/rfid/issues/111#issuecomment-420433658 .
 

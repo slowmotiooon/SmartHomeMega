@@ -1,5 +1,6 @@
 #include <remote.h>
 #include <IRremote.h>
+#include <pins.h>
 
 IRrecv irrecv(RECV_PIN);
 decode_results results;

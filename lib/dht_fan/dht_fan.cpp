@@ -1,10 +1,11 @@
 #include <dht_fan.h>
+#include <pins.h>
 
 extern float humidity;
 extern float temperature;
 extern bool fanState;
-DHT dht(DHTPIN,DHTTYPE);
-int edgeTemperature = 28;
+DHT dht(DHT_PIN,DHT_TYPE);
+int edgeTemperature = 32;
 bool forcedFan = false;
 
 // 初始化 DHT 传感器和风扇控制引脚
